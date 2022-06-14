@@ -1,0 +1,41 @@
+.backgroundColors {
+  left: 20%;
+  padding: 10px;
+}
+table tr td {
+  border: 1px solid black;
+}
+td div {
+  width: 30px;
+  height: 30px;
+}
+.white {
+  background-color: white;
+}
+.lightgray {
+  background-color: lightgray;
+}
+.lightpink {
+  background-color: lightpink;
+}
+.lightcoral {
+  background-color: lightcoral;
+}
+.lightsalmon {
+  background-color: lightsalmon;
+}
+.lightgoldenrodyellow {
+  background-color: lightgoldenrodyellow;
+}
+.lightskyblue {
+  background-color: lightskyblue;
+}
+.lightblue {
+  background-color: lightblue;
+}
+.lightcyan {
+  background-color: lightcyan;
+}
+.lightseagreen {
+  background-color: lightseagreen;
+}

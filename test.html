@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="A">clone</div>
+    <span id="B"></span>
+    <div id="C">Test</div>
+    <div id="D"></div>
+    <div id="E">
+      text
+      <p>childNode</p>
+    </div>
+
+    <ul>
+      <li>Hi</li>
+      <li>there</li>
+    </ul>
+
+    <script>
+      const E = document.getElementById("E");
+      const test = document.createElement("strong");
+      E.appendChild(test);
+
+      const A = document.getElementById("A");
+      const B = document.getElementById("B");
+      const C = document.getElementById("C").firstChild;
+      const D = document.getElementById("D");
+
+      //   A.removeChild(A);
+      B.parentNode.removeChild(B);
+      C.parentNode.removeChild(C);
+      const div = document.querySelectorAll("div");
+
+      const ul = document.querySelector("ul");
+      console.log(D === A);
+    </script>
+  </body>
+</html>

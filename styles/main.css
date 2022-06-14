@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+.websiteContainer {
+  display: flex;
+  height: 100vh;
+}
+.navbarContainer {
+  padding: 20px;
+  width: 200px;
+  border-right: 1px solid;
+}
+.noteNavigation {
+  /* border: 1px solid; */
+}
+.createNewNote {
+  padding: 20px;
+  flex-grow: 1;
+  align-items: center;
+}
+/* .createNewNote > input {
+  
+  outline: none;
+  color: gray;
+  font-size: 24px;
+  font-weight: bold;
+} */
+.newNoteContainer {
+  border: 0.2px outset grey;
+  border-radius: 8px;
+  box-shadow: 10px 10px 16px rgba(191, 191, 191, 0.8);
+  /* width: 100%; */
+}
+.newNoteTitle:empty::before {
+  content: "Title";
+  color: gray;
+  font-weight: bold;
+  font-size: 24px;
+}
+.newNoteTitle {
+  /* width: 100%; */
+  font-size: 24px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  padding: 20px;
+}
+.newNoteContent:empty::before {
+  content: "Take a note";
+  color: gray;
+  font-weight: bold;
+}
+.newNoteContent {
+  /* width: 100%; */
+  font-size: 18px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  padding: 0px 0px 20px 20px;
+}
+.newNoteIcons {
+  position: relative;
+}
+
+.material-symbols-outlined {
+  padding: 20px 20px 20px 20px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+.material-symbols-outlined:hover {
+  background: lightgray;
+  border-radius: 50%;
+  transform: scale(1.1);
+  cursor: pointer;
+}

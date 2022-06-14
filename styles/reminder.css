@@ -1,0 +1,12 @@
+.clickedIcon {
+  display: none;
+  position: absolute;
+}
+
+.reminderContainer {
+  left: 20px;
+  padding: 10px;
+}
+.reminderContainer div:first-child {
+  border-bottom: 1px solid black;
+}

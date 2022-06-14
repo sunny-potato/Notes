@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+    <link rel="stylesheet" href="./styles/reminder.css" />
+    <link rel="stylesheet" href="./styles/backgroundColor.css">
+
+    <title>Notes</title>
+  </head>
+  <body>
+    <div class="websiteContainer">
+      <div class="navbarContainer">
+        <ul class="noteNavigation">
+          <li class="displayAllNotes">Notes</li>
+          <li class="displayAllNotes">Notes</li>
+
+        </ul>
+      </div>
+
+      <div class="createNewNote">
+        <!-- <input class="newNoteBefore" type="text" placeholder="Take a note" />
+        <button class="displayNewList" onClick="goToList()">New list</button>
+        <button>New note with drawing</button>
+        <button>New note with image</button> -->
+        <div class="newNoteContainer">
+          <div
+            class="newNoteTitle"
+            role="textbox"
+            contenteditable="true"
+            aria-multiline="true"
+          ></div>
+          <div
+            class="newNoteContent"
+            role="textbox"
+            contenteditable="true"
+            aria-multiline="true"
+          ></div>
+          <!-- "textarea"= a replaced element  
+               possible to resize by dragging in the lower right corner
+               but not auto-growing
+               solutions for multi-line are 1) normal element using js 
+               eller 2) normal element with "role="textbox"" which work like input-form-->
+          <div class="newNoteIcons">
+            <span
+              class="material-symbols-outlined"
+              alt="remind me"
+              >notification_add
+            </span>
+            <span class="material-symbols-outlined"> person_add </span>
+            <span class="material-symbols-outlined"> palette </span>
+            <span class="material-symbols-outlined"> image </span>
+            <span class="material-symbols-outlined"> archive </span>
+            <span class="material-symbols-outlined"> undo </span>
+            <span class="material-symbols-outlined"> redo </span>
+            <div class="clickedIcon">
+              <div class="reminderContainer">
+                <div>Pick date & time</div>
+                <div class="selectDate">Pick date</div>
+                <div class="selectTime">Pick time</div>
+                <div class="reminderOptions">reminder</div>
+              </div>
+            </div>
+            <div class="clickedIcon">share with others</div>
+            <div class="clickedIcon">
+              <div class="backgroundColors"><table><tr><td><div class="white"></div></td>
+                <td><div class="lightgray"></div></td><td><div class="lightpink"></div></td><td><div class="lightcoral"></div></td><td><div class="lightsalmon"></div></td></tr>
+              <tr></tr><tr><td><div class="lightgoldenrodyellow"></div></td>
+                <td><div class="lightskyblue"></div></td><td><div class="lightblue"></div></td><td><div class="lightcyan"></div></td><td><div class="lightseagreen"></div></td></tr>
+              <tr></tr>
+              </table></div>
+            </div>
+            <div class="clickedIcon">addToImage</div>
+            <div class="clickedIcon">archiveNote</div>
+            <div class="clickedIcon">unDo</div>
+            <div class="clickedIcon">reDo</div>
+            <button class="saveButton">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
