@@ -1,6 +1,4 @@
-// const newNoteBefore = document.querySelector(".newNoteBefore");
 const newNoteContainer = document.querySelector(".newNoteContainer");
-const newNoteContent = document.querySelector(".newNoteContent");
 const createNewNote = document.querySelector(".createNewNote");
 // const ButtonsMain = document.querySelectorAll(".createNewNote > button");
 // newNoteBefore.addEventListener("focusin", (event) => {
@@ -12,10 +10,6 @@ const createNewNote = document.querySelector(".createNewNote");
 // function goToList() {
 //   console.log(ButtonsMain.NodeList);
 // }
-
-newNoteContainer.addEventListener("focusout", () => {
-  // save data
-});
 
 const newNoteIcons = document.querySelectorAll(".material-symbols-outlined");
 const clickedIcon = document.querySelectorAll("div.clickedIcon");
@@ -38,4 +32,21 @@ backgroundColors.forEach((color, index) => {
     // console.log(color.className, index);
     newNoteContainer.style.background = color.className;
   });
+});
+
+const saveButton = document.querySelector(".saveButton");
+const savedNotes = document.querySelector(".savedNotes");
+saveButton.addEventListener("click", () => {
+  let saveNewNote = newNoteContainer.cloneNode(true);
+  savedNotes.appendChild(saveNewNote);
+  saveNewNote.className = `savedNote`;
+});
+
+const cancelButton = document.querySelector(".cancelButton");
+const newNoteTitle = document.querySelector(".newNoteTitle");
+const newNoteContent = document.querySelector(".newNoteContent");
+cancelButton.addEventListener("click", () => {
+  newNoteTitle.textContent = "";
+  newNoteContent.textContent = "";
+  newNoteContainer.style.background = "white";
 });

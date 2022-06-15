@@ -10,3 +10,10 @@
 .reminderContainer div:first-child {
   border-bottom: 1px solid black;
 }
+.displayLabels span {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0px 5px;
+  font-size: 12px;
+}

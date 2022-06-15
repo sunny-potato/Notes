@@ -2,25 +2,20 @@
   margin: 0;
   font-size: 18px;
 }
-
-body {
-  margin: 0;
-}
 .websiteContainer {
   display: flex;
-  height: 100vh;
 }
 .navbarContainer {
   padding: 20px;
-  width: 200px;
+  width: 15%;
   border-right: 1px solid;
 }
-.noteNavigation {
-  /* border: 1px solid; */
+.noteContainer {
+  margin: 20px;
+  flex-grow: 1;
 }
 .createNewNote {
-  padding: 20px;
-  flex-grow: 1;
+  padding: 40px;
   align-items: center;
 }
 /* .createNewNote > input {
@@ -63,8 +58,11 @@ body {
   outline: none;
   padding: 0px 0px 20px 20px;
 }
+/* .extraInformation {
+  display: none;
+} */
 .newNoteIcons {
-  position: relative;
+  /* position: relative; */
 }
 
 .material-symbols-outlined {
@@ -76,4 +74,24 @@ body {
   border-radius: 50%;
   transform: scale(1.1);
   cursor: pointer;
+}
+/* .saveButton .cancelButton {
+  position: absolute;
+  right: 40px;
+} */
+.savedNotesContainer {
+  padding: 20px;
+}
+.savedNotes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.savedNote {
+  width: 20%;
+  height: 30%;
+  margin: 10px;
+  border: 0.2px outset grey;
+  border-radius: 8px;
+  box-shadow: 10px 10px 16px rgba(191, 191, 191, 0.8);
 }
