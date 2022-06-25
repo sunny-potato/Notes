@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  font-size: 18px;
+}
+.websiteContainer {
+  display: flex;
+}
+.navbarContainer {
+  padding: 20px;
+  width: 15%;
+  border-right: 1px solid;
+}
+.noteNavigation {
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 10px;
+  line-height: 2;
+}
+.noteNavigation a {
+  text-decoration: none;
+  color: black;
+}
+.noteNavigation a:hover {
+  text-decoration: underline;
+  transform: scale(2);
+}
+.archiveContainer {
+  margin: 20px;
+  flex-grow: 1;
+}

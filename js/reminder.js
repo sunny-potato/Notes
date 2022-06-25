@@ -7,6 +7,10 @@ const reminderTime = document.querySelector(
   "div.reminderContainer input[type='time']"
 );
 
+const displayLabels = document.querySelector(".displayLabels");
+const labelContainer = document.createElement("span");
+let lastReminderTime;
+
 reminderSave.addEventListener("click", () => {
   if (reminderDate.value === "") {
     return;
@@ -14,15 +18,27 @@ reminderSave.addEventListener("click", () => {
   if (reminderTime.value === "") {
     return;
   } else {
-    const displayLabels = document.querySelector(".displayLabels");
-    const labelContainer = document.createElement("span");
     labelContainer.className = "labeledReminder";
     labelContainer.textContent = `Alarm-${reminderDate.value}, ${reminderTime.value}`;
     displayLabels.appendChild(labelContainer);
     clickedIcon[0].style.display = "none";
-    // console.log(displayLabels);
+
+    const reservedTime = new Date(
+      `${reminderDate.value}T${reminderTime.value}`
+    ).getTime();
+
+    const currentTime = new Date().getTime();
+    const millisecondsDateTime = reservedTime - currentTime;
+    // const savedAllNotes = document.querySelectorAll(".savedNotes");
+    // console.log(savedAllNotes.children);
+    lastReminderTime = millisecondsDateTime;
   }
 });
+
+const displayAlram = (noteElement) => {
+  console.log("heeieiei", { noteElement });
+  // alert("Reminder!!!");
+};
 
 const labeledReminder = document.querySelectorAll(".labeledReminder");
 const checkReminder = () => {

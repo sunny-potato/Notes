@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="./styles/reminder.css" />
     <link rel="stylesheet" href="./styles/backgroundColor.css" />
+    <link rel="stylesheet" href="./styles/uploadImage.css" />
 
     <title>Notes</title>
   </head>
@@ -18,20 +19,17 @@
     <div class="websiteContainer">
       <div class="navbarContainer">
         <ul class="noteNavigation">
-          <li class="displayAllNotes">Notes</li>
-          <li class="displayAllNotes">Reminder</li>
-          <li class="displayAllNotes">Archive</li>
+          <li class="displayAllNotes"><a href="index.html">Main</a></li>
+          <li class="displayAllNotes"><a href="reminder.html">Reminder</a></li>
+          <li class="displayAllNotes"><a href="archive.html">Archive</a></li>
           <li class="displayAllNotes">Edit labels</li>
           <li class="displayAllNotes">Trash</li>
         </ul>
       </div>
       <div class="noteContainer">
         <div class="createNewNote">
-          <!-- <input class="newNoteBefore" type="text" placeholder="Take a note" />
-          <button class="displayNewList" onClick="goToList()">New list</button>
-          <button>New note with drawing</button>
-          <button>New note with image</button> -->
           <div class="newNoteContainer">
+            <div class="displayImages"></div>
             <div
               class="newNoteTitle"
               role="textbox"
@@ -54,12 +52,12 @@
               <span class="material-symbols-outlined" alt="remind me"
                 >notification_add
               </span>
-              <span class="material-symbols-outlined"> person_add </span>
+              <!-- <span class="material-symbols-outlined"> person_add </span> -->
               <span class="material-symbols-outlined"> palette </span>
               <span class="material-symbols-outlined"> image </span>
               <span class="material-symbols-outlined"> archive </span>
-              <span class="material-symbols-outlined"> undo </span>
-              <span class="material-symbols-outlined"> redo </span>
+              <span class="material-symbols-outlined disabled"> undo </span>
+              <span class="material-symbols-outlined disabled"> redo </span>
               <button class="saveButton">Save</button>
               <button class="cancelButton">Cancel</button>
               <div class="clickedIcon">
@@ -71,12 +69,12 @@
                   </p>
                   <p>
                     <label for="reminderTime">Time </label>
-                    <input type="time" name="reminderTime" required />
+                    <input type="time" name="reminderTime" step="1" required />
                   </p>
                   <button class="reminderSave">Save</button>
                 </div>
               </div>
-              <div class="clickedIcon">share with others</div>
+              <!-- <div class="clickedIcon">share with others</div> -->
               <div class="clickedIcon">
                 <div class="backgroundColors">
                   <table>
@@ -99,7 +97,14 @@
                   </table>
                 </div>
               </div>
-              <div class="clickedIcon">addToImage</div>
+              <div class="clickedIcon">
+                <input
+                  type="file"
+                  class="uploadImage"
+                  accept="image/*"
+                  multiple
+                />
+              </div>
               <div class="clickedIcon">archiveNote</div>
               <div class="clickedIcon">unDo</div>
               <div class="clickedIcon">reDo</div>
@@ -111,7 +116,11 @@
         </div>
       </div>
     </div>
+    <!-- <script src="./js/archive.js"></script> -->
     <script src="./js/main.js"></script>
     <script src="./js/reminder.js"></script>
+    <script src="./js/uploadImage.js"></script>
+
+    <script src="./js/halla.js" type="module"></script>
   </body>
 </html>
